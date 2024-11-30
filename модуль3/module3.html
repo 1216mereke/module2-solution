@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our delicious menu: chicken, beef, and sushi by Food, LLC.">
+    <meta name="keywords" content="Chicken, Beef, Sushi, Food, Restaurant">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Food LLC - Menu</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Dosis:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-header button.navbar-toggle,
+        .navbar-header .icon-bar {
+            border: 2px solid #000 !important;
+        }
+
+        #header-nav {
+            background-color: #999999;
+            border: 2px solid #000;
+            border-radius: 0;
+        }
+
+        .navbar-brand {
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+
+        .navbar-brand h1 {
+            color: #000;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 15px;
+            line-height: 0.75;
+        }
+
+        #nav-list li {
+            background: #fff;
+            border-bottom: 2px solid;
+        }
+
+        #nav-list li a {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .menu-container {
+            margin: 20px auto;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            background-color: #999999;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">
+                        <h1>Food, LLC</h1>
+                    </a>
+                </div>
+                <div id="menu-collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Menu Section -->
+    <div class="container menu-container">
+        <h1 class="text-center main-title">Our Menu</h1>
+        <section id="menu" class="menu">
+            <div class="menu-item">
+                <h3>Chicken</h3>
+                <p>Delicious chicken dishes for every taste.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Beef</h3>
+                <p>Juicy steaks and classic beef dishes.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Sushi</h3>
+                <p>Fresh sushi and rolls made with traditional recipes.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Food, LLC. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        // Example JavaScript for interactivity
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                alert('You selected: ' + item.querySelector('h3').textContent);
+            });
+        });
+    </script>
+</body>
+
+</html>
